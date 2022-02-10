@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="11dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="49dp"
+        android:layout_height="49dp"
+        app:srcCompat="@drawable/trx_in" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titletrxtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/work_sans_bold"
+            android:text="@string/title_trx"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/datetrxtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/work_sans_medium"
+            android:text="@string/date_trx"
+            android:textColor="@color/textColor"
+            android:textSize="12dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/amounttrxtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/work_sans_bold"
+        android:gravity="end"
+        android:text="@string/amount_trx"
+        android:textColor="@color/textGreen"
+        android:textSize="14dp" />
+
+</LinearLayout>

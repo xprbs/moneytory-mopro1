@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundPrimary"
     android:paddingHorizontal="40dp"
-    tools:context=".AddIncome">
+    tools:context=".TransactionActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -54,7 +54,7 @@
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:id="@+id/InputAmount"
+                android:id="@+id/InputAmountIncome"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -78,11 +78,11 @@
                 android:fontFamily="@font/work_sans_medium"
                 android:text="Description"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/InputAmount"
+                app:layout_constraintTop_toBottomOf="@+id/InputAmountIncome"
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:id="@+id/InputDesc"
+                android:id="@+id/InputDescIncome"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -106,18 +106,18 @@
                 android:fontFamily="@font/work_sans_medium"
                 android:text="Date"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/InputDesc"
+                app:layout_constraintTop_toBottomOf="@+id/InputDescIncome"
                 tools:layout_editor_absoluteX="30dp" />
 
             <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/InputDate"
+                android:id="@+id/InputDateIncome"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/input_form"
                 android:fontFamily="@font/work_sans_medium"
                 android:hint="Date"
-                android:inputType="date"
+                android:inputType="text"
                 android:minHeight="60dp"
                 android:textColor="@color/white"
                 android:textColorHint="@color/textColor"
@@ -127,12 +127,11 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <Button
-                android:id="@+id/buttonLogin"
+                android:id="@+id/buttonSaveIncome"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
                 android:width="331dp"
-                android:onClick="loginClicked"
                 android:height="60dp"
                 android:background="@drawable/splash_button"
                 android:backgroundTint="@color/orangeColor"
@@ -145,7 +144,7 @@
                 app:backgroundTint="@color/orangeColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/InputDate" />
+                app:layout_constraintTop_toBottomOf="@+id/InputDateIncome" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

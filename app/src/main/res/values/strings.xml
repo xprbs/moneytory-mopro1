@@ -4,4 +4,8 @@
     <string name="btnLoginString">Login</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_trx">Title Here</string>
+    <string name="date_trx">Date here</string>
+    <string name="amount_trx">Amount Here</string>
 </resources>

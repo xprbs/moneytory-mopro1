@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundPrimary"
     android:paddingHorizontal="40dp"
-    tools:context=".AddOutcome">
+    tools:context=".TransactionActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -54,7 +54,7 @@
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:id="@+id/InputAmount"
+                android:id="@+id/InputAmountOutcome"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -78,11 +78,11 @@
                 android:fontFamily="@font/work_sans_medium"
                 android:text="Description"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/InputAmount"
+                app:layout_constraintTop_toBottomOf="@+id/InputAmountOutcome"
                 tools:layout_editor_absoluteX="0dp" />
 
             <EditText
-                android:id="@+id/InputDesc"
+                android:id="@+id/InputDescOutcome"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
@@ -106,12 +106,12 @@
                 android:fontFamily="@font/work_sans_medium"
                 android:text="Date"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toBottomOf="@+id/InputDesc"
+                app:layout_constraintTop_toBottomOf="@+id/InputDescOutcome"
                 tools:layout_editor_absoluteX="30dp" />
 
             <EditText
                 android:layout_marginTop="10dp"
-                android:id="@+id/InputDate"
+                android:id="@+id/InputDateOutcome"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:background="@drawable/input_form"
@@ -127,12 +127,12 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
             <Button
-                android:id="@+id/buttonLogin"
+                android:onClick="saveOutcome"
+                android:id="@+id/buttonSaveOutcome"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_marginTop="30dp"
                 android:width="331dp"
-                android:onClick="loginClicked"
                 android:height="60dp"
                 android:background="@drawable/splash_button"
                 android:backgroundTint="@color/orangeColor"
@@ -145,7 +145,7 @@
                 app:backgroundTint="@color/orangeColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/InputDate" />
+                app:layout_constraintTop_toBottomOf="@+id/InputDateOutcome" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

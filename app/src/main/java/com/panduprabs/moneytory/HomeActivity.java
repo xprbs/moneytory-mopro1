@@ -1,17 +1,29 @@
 package com.panduprabs.moneytory;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class HomeActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.Date;
+
+public class HomeActivity extends AppCompatActivity{
 
     BottomNavigationView bottomNavigationView;
     Fragment selectedFragement = new HomeFragment();
@@ -19,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -51,5 +64,30 @@ public class HomeActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+//    void storeDataInArrays(){
+//        Cursor cursor = DB.readAllData();
+//        if (cursor.getCount() == 0){
+//            Toast.makeText(this, "No Data", Toast.LENGTH_SHORT).show();
+//        }else{
+//            while (cursor.moveToNext()){
+//                id_trx.add(cursor.getString(0));
+//                desc_trx.add(cursor.getString(1));
+//                date_trx.add(cursor.getString(2));
+//                amount_trx.add(cursor.getString(3));
+//
+//            }
+//        }
+//    }
+
+    public void addIncome(View view){
+        startActivity(new Intent(HomeActivity.this, AddIncome.class));
+    }
+
+//    public void addOutcome(View view){
+//        startActivity(new Intent(HomeActivity.this, AddOutcome.class));
+//    }
 
 }
