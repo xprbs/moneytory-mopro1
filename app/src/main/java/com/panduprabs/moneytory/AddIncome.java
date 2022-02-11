@@ -38,16 +38,9 @@ public class AddIncome extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Integer amount = Integer.parseInt(jumlah.getText().toString());
-//                Integer amount = Integer.parseInt(mentahjumlah);
                 String deskripsi = descr.getText().toString();
                 String tgl = datee.getText().toString();
                 category = "income";
-
-//                Log.v("Jumlah : ", amount.toString());
-//                Log.v("Deskripsi : ", deskripsi);
-//                Log.v("Tanggal : ", tgl);
-//                Log.v("Kategori", category);
-
 
                 if (amount.equals("") || deskripsi.equals("") || tgl.equals("")){
                     Toast.makeText(AddIncome.this, "Please fill all the form", Toast.LENGTH_SHORT).show();

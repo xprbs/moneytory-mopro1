@@ -4,9 +4,11 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -26,6 +28,7 @@ import java.util.Date;
 public class HomeActivity extends AppCompatActivity{
 
     BottomNavigationView bottomNavigationView;
+    ImageButton imageButton;
     Fragment selectedFragement = new HomeFragment();
 
 
@@ -66,28 +69,16 @@ public class HomeActivity extends AppCompatActivity{
     }
 
 
-
-//    void storeDataInArrays(){
-//        Cursor cursor = DB.readAllData();
-//        if (cursor.getCount() == 0){
-//            Toast.makeText(this, "No Data", Toast.LENGTH_SHORT).show();
-//        }else{
-//            while (cursor.moveToNext()){
-//                id_trx.add(cursor.getString(0));
-//                desc_trx.add(cursor.getString(1));
-//                date_trx.add(cursor.getString(2));
-//                amount_trx.add(cursor.getString(3));
-//
-//            }
-//        }
-//    }
-
     public void addIncome(View view){
         startActivity(new Intent(HomeActivity.this, AddIncome.class));
     }
+//
+    public void seeHistory(View view){
+        startActivity(new Intent(HomeActivity.this, HistoryActivity.class));
+    }
 
-//    public void addOutcome(View view){
-//        startActivity(new Intent(HomeActivity.this, AddOutcome.class));
-//    }
+    public void addOutcome(View view){
+        startActivity(new Intent(HomeActivity.this, AddOutcome.class));
+    }
 
 }

@@ -9,12 +9,20 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+import androidx.annotation.Nullable;
+
 public class DBHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "moneytory.db";
 
     private static final String TABLE_USERS = "users";
     private static final String TABLE_TRX = "trx";
+
+    static final String KEY_ID = "id";
+    static final String KEY_AMOUNT = "amount";
+    static final String KEY_DESC = "deskripsi";
+    static final String KEY_DATE = "tgl";
+    static final String KEY_CATEGORY = "category";
 
     private static final String CREATE_TABLE_USERS = "CREATE TABLE " +
             TABLE_USERS +
@@ -34,10 +42,10 @@ public class DBHelper extends SQLiteOpenHelper {
             "tgl TEXT," +
             "category TEXT)";
 
-    public DBHelper (Context context){
-        super(context, "moneytory.db", null, 2);
-
+    DBHelper(@Nullable Context context){
+        super(context, DB_NAME, null, 2);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase MyDB) {
